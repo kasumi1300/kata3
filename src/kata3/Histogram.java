@@ -2,6 +2,6 @@
 package kata3;
 import java.util.*;
 
-public class Histogram extends HashMap <Integer,Integer> {
+public class Histogram<T> extends HashMap <T,Integer> {
     
 }
