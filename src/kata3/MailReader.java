@@ -10,6 +10,8 @@ public class MailReader {
             BufferedReader reader = new BufferedReader(new FileReader(new File(filename)));
             while(true){
                 String mail = reader.readLine();
+                if(mail==null) break;
+                list.add(mail);
             }
         }
         catch(FileNotFoundException ex){
