@@ -1,12 +1,16 @@
 package kata3;
-
+import java.util.*;
 public class HistogramBuilder<T>{
     public Histogram<T> histogram;
 
     public HistogramBuilder() {
         this.histogram = new Histogram<>();
     }
-    public void calculate(T [] data){
+    public void calculate(T[] data){
+        for (T item : data)
+            histogram.put(item,getCount(item)+1);
+    }
+    public void calculate(List<T> data){
         for (T item : data)
             histogram.put(item,getCount(item)+1);
     }
